@@ -13,14 +13,14 @@ public class StringCalculator {
     }
 
     public static int addWithCustomDelimiter(String numbers, String delimiter) throws Exception {
-        String[] inputs = numbers.split(delimiter);
+        String[] inputs = numbers.split(delimiter); //delimiter.lenght
         int sumNumbers = 0;
         int inputToInt;
         String negativeNotAllowed = "";
 
 
         for (String input : inputs) {
-            inputToInt = Integer.parseInt(input.replace("\n", ""));
+            inputToInt = Integer.parseInt(input.replaceAll("\n", ""));
             if (inputToInt < 0) {
                 negativeNotAllowed = negativeNotAllowed + input.replace("\n", "") + " ";
             } else {
@@ -55,7 +55,7 @@ public class StringCalculator {
 
         while (state) {
             delimiter = delimiter + String.valueOf(numbers.charAt(d));
-            if (numbers.charAt(d) == '\n') {
+            if (numbers.charAt(i) == '\n') {
                 state = false;
             } else {
                 d++;
@@ -63,9 +63,9 @@ public class StringCalculator {
             }
         }
 
-
+        delimiter = delimiter.replaceAll("(.)\\1+", "$1");
         delimiter = "[" + delimiter + "]";
-        subNumbers = numbers.substring(i);
+        subNumbers = numbers.substring(i).replaceAll("(.)\\1+", "$1");
 //        System.out.println("subnumber " + subNumbers);
 //        System.out.println("delimiter " + delimiter);
         return addWithCustomDelimiter(subNumbers, delimiter);
