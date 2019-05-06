@@ -16,9 +16,9 @@ public class StringCalculator {
         String[] inputs = numbers.split(delimiter);
         int sumNumbers = 0;
 
-        System.out.println(inputs[0]);
-        System.out.println(inputs[1]);
-        System.out.println(inputs[2]);
+//        System.out.println(inputs[0]);
+//        System.out.println(inputs[1]);
+//        System.out.println(inputs[2]);
 
 
         for (String input: inputs) {
@@ -57,8 +57,8 @@ public class StringCalculator {
 
         delimiter = "[" + delimiter + "]";
         subNumbers = numbers.substring(i);
-        System.out.println("subnumber " + subNumbers);
-        System.out.println("delimiter " + delimiter);
+//        System.out.println("subnumber " + subNumbers);
+//        System.out.println("delimiter " + delimiter);
         return addWithCustomDelimiter(subNumbers, delimiter);
     }
 

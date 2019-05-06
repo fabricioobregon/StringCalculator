@@ -12,6 +12,8 @@ public class Main {
         System.out.println("Test 2a input 1\\n,2,3 should result 6. Result: " + StringCalculator.add("1\n,2,3"));
         System.out.println("Test 2b input 1,\\n2,4 should result 7. Result: " + StringCalculator.add("1,\n2,4"));
         System.out.println("Test 3c input //;\\n1;3;4 should result 8. Result: " + StringCalculator.add("//;\n1;3;4"));
+        System.out.println("Test 3e.i input //$\\n1$2$3 should result 6. Result: " + StringCalculator.add("//$\n1$2$3"));
+        System.out.println("Test 3e.ii input //@\\n2@3@8 should result 13. Result: " + StringCalculator.add("//@\n2@3@8"));
 
     }
 }
