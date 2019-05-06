@@ -1,8 +1,8 @@
 package com.sevenshifts.interview;
 
-public class StringCalculator {
+public class StringCalculator{
 
-    public static int add(String numbers){
+    public static int add(String numbers) throws Exception{
         if(numbers.isBlank()){
             return 0;
         }else if(testCustomDelimiter(numbers)){
@@ -12,19 +12,26 @@ public class StringCalculator {
         }
     }
 
-    public static int addWithCustomDelimiter(String numbers, String delimiter){
+    public static int addWithCustomDelimiter(String numbers, String delimiter) throws Exception{
         String[] inputs = numbers.split(delimiter);
         int sumNumbers = 0;
-
-//        System.out.println(inputs[0]);
-//        System.out.println(inputs[1]);
-//        System.out.println(inputs[2]);
+        int inputToInt;
+        String negativeNotAllowed = "";
 
 
         for (String input: inputs) {
-            sumNumbers += Integer.parseInt(input.replace("\n", ""));
+            inputToInt = Integer.parseInt(input.replace("\n", ""));
+            if (inputToInt < 0){
+                negativeNotAllowed  = negativeNotAllowed + input.replace("\n", "") + " ";
+            }
+            sumNumbers += inputToInt;
         }
-        return sumNumbers;
+
+        if (negativeNotAllowed.equals("")){
+            return  sumNumbers;
+        }else{
+            throw new Exception("Negatives not allowed:  " + negativeNotAllowed);
+        }
     }
 
 
@@ -38,7 +45,7 @@ public class StringCalculator {
 
 
 
-    private static int findCustomDelimiter(String numbers){
+    private static int findCustomDelimiter(String numbers) throws Exception{
         String delimiter = "";
         boolean state = true;
         int d = 2, i = 3;
