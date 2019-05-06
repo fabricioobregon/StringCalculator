@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+        System.out.println("Test 1d input empty should result 0. Result: " + StringCalculator.add(""));
         System.out.println("Test 1d input 1,2,5 should result 8. Result: " + StringCalculator.add("1,2,5"));
         System.out.println("Test 1d input 10,20,50 should result 80. Result: " + StringCalculator.add("10,20,50"));
         System.out.println("Test 1d input 11,21,51 should result 83. Result: " + StringCalculator.add("11,21,51"));
