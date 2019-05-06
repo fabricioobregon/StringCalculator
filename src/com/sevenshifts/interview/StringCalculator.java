@@ -12,7 +12,7 @@ public class StringCalculator {
         }
     }
 
-    public static int addWithCustomDelimiter(String numbers, String delimiter) throws Exception {
+    private static int addWithCustomDelimiter(String numbers, String delimiter) throws Exception {
         String[] inputs = numbers.split(delimiter); //delimiter.lenght
         int sumNumbers = 0;
         int inputToInt;
