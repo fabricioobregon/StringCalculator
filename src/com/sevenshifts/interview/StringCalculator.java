@@ -3,6 +3,7 @@ package com.sevenshifts.interview;
 public class StringCalculator {
 
     public static int add(String numbers){
+        numbers = numbers.replace("\n", "");
         String[]  inputs = numbers.split(",");
         int sumNumbers = 0;
 
