@@ -16,7 +16,7 @@ public class Main {
             System.out.println("Test 3e.i input //$\\n1$2$3 should result 6. Result: " + StringCalculator.add("//$\n1$2$3"));
             System.out.println("Test 3e.ii input //@\\n2@3@8 should result 13. Result: " + StringCalculator.add("//@\n2@3@8"));
             System.out.println("Test Bonus1 input 2,1001 should result 2. Result: " + StringCalculator.add("2,1001"));
-            System.out.println("Test Bonus2 input //***\\n1***2***3 should result 6. Result: " + StringCalculator.add("//***\n1***2***3"));
+            System.out.println("Test Bonus2 input //***\\n1***2***33 should result 36. Result: " + StringCalculator.add("//***\n1***2***33"));
             System.out.println("Test Bonus3 input //$,@\\n1$2@3 should result 6. Result: " + StringCalculator.add("//$,@\n1$2@3"));
             System.out.println("Test Bonus input //$$,@@@,***\\n1$$2@@@3***4 should result 10. Result: " + StringCalculator.add("//$$,@@@.***\n1$$2@@@3***4"));
             System.out.println("Test 4 input //@\\n2@3@8 should result Exception. Result: " + StringCalculator.add("//@\n-2@-3@-8"));

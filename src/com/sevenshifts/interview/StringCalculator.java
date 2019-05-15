@@ -54,7 +54,7 @@ public class StringCalculator {
         String subNumbers;
 
         while (state) {
-            delimiter = delimiter + String.valueOf(numbers.charAt(d));
+            delimiter = delimiter +numbers.charAt(d);
             if (numbers.charAt(i) == '\n') {
                 state = false;
             } else {
@@ -65,7 +65,8 @@ public class StringCalculator {
 
         delimiter = delimiter.replaceAll("(.)\\1+", "$1");
         delimiter = "[" + delimiter + "]";
-        subNumbers = numbers.substring(i).replaceAll("(.)\\1+", "$1");
+        String regex = "(" + delimiter + ")\\1+";
+        subNumbers = numbers.substring(i).replaceAll(regex, "$1");
 //        System.out.println("subnumber " + subNumbers);
 //        System.out.println("delimiter " + delimiter);
         return addWithCustomDelimiter(subNumbers, delimiter);
